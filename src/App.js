@@ -28,7 +28,7 @@ function App() {
     }).then(() => {
       setListOfFriends(
         listOfFriends.map((val) => {
-          return val._id == id ? { _id: id, name: val.name, age: newAge } : val;
+          return val._id === id ? { _id: id, name: val.name, age: newAge } : val;
         })
       );
     });
@@ -39,7 +39,7 @@ function App() {
       () => {
         setListOfFriends(
           listOfFriends.filter((val) => {
-            return val._id != id;
+            return val._id !== id;
           })
         );
       }
